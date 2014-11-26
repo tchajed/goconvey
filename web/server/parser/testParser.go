@@ -3,6 +3,7 @@ package parser
 import (
 	"encoding/json"
 	"fmt"
+	"regexp"
 	"strconv"
 	"strings"
 
@@ -146,8 +147,10 @@ func trailingComma(value string) bool {
 	return strings.HasSuffix(value, ",")
 }
 
+var goTestLogOutputRe = regexp.MustCompile(`^\s*[[:print:]]*\.go:[[:digit:]]*:`)
+
 func isGoTestLogOutput(line string) bool {
-	return strings.Count(line, ":") == 2
+	return goTestLogOutputRe.MatchString(line)
 }
 
 func isPanic(line string) bool {
