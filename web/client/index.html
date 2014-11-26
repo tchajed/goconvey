@@ -255,10 +255,9 @@
 						<div class="panic-details">
 							<div class="panic-story">
 							<div class="panic-file">
+								<b>{{TestName}}</b>
 								{{if File|notempty}}
 								<a href="goconvey://open/?url=file://{{File|url}}&line={{Line}}">{{File|relativePath}}{{if Line|more>0}}:{{Line}}{{/if}}&nbsp; <i class="fa fa-external-link"></i></a>
-								{{else}}
-								<b>{{TestName}}</b>
 								{{/if}}
 						</div>
 					{{if _path|notempty}}
@@ -289,10 +288,9 @@
 							<div class="failure-details">
 								<div class="failure-story">
 									<div class="failure-file">
+										<b class="test-name-link"><a href="#test-{{_id}}">{{TestName}}</a></b>
 										{{if File|notempty}}
 										<a href="goconvey://open/?url=file://{{File|url}}&line={{Line}}">{{File|relativePath}}{{if Line|more>0}}:{{Line}}{{/if}}&nbsp; <i class="fa fa-external-link"></i></a>
-										{{else}}
-										<b class="test-name-link"><a href="#test-{{_id}}">{{TestName}}</a></b>
 										{{/if}}
 									</div>
 							{{if _path|notempty}}
