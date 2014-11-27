@@ -21,9 +21,9 @@ import (
 	"github.com/smartystreets/goconvey/web/server/contract"
 	"github.com/smartystreets/goconvey/web/server/executor"
 	"github.com/smartystreets/goconvey/web/server/messaging"
-	"github.com/smartystreets/goconvey/web/server/parser"
 	"github.com/smartystreets/goconvey/web/server/system"
 	"github.com/smartystreets/goconvey/web/server/watch"
+	"github.com/tchajed/goconvey/web/server/parser"
 )
 
 func init() {
